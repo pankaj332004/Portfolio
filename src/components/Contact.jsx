@@ -88,9 +88,9 @@ const Contact = () => {
             {/* Socials */}
             <div className="contact__socials">
               {[
-                        { icon: <GithubIcon size={20} />, label: 'GitHub', href: 'https://github.com', color: 'emerald' },
-                { icon: <LinkedinIcon size={20} />, label: 'LinkedIn', href: 'https://linkedin.com', color: 'sky' },
-                { icon: <TwitterIcon size={20} />, label: 'Twitter', href: 'https://twitter.com', color: 'amber' },
+                        { icon: <GithubIcon size={20} />, label: 'GitHub', href: 'https://github.com/pankaj332004', color: 'emerald' },
+                { icon: <LinkedinIcon size={20} />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/pankaj-kumar-rajbhar-b77150340/', color: 'sky' },
+                { icon: <TwitterIcon size={20} />, label: 'Twitter', href: 'https://x.com/pk902124', color: 'amber' },
               ].map((s) => (
                 <motion.a
                   key={s.label}

@@ -26,7 +26,6 @@ const categories = [
       { name: 'Express.js', level: 83 },
       { name: 'Python', level: 72 },
       { name: 'REST APIs', level: 88 },
-      { name: 'GraphQL', level: 60 },
       { name: 'JWT Auth', level: 80 },
     ],
   },
@@ -38,9 +37,7 @@ const categories = [
       { name: 'MongoDB', level: 82 },
       { name: 'PostgreSQL', level: 70 },
       { name: 'MySQL', level: 72 },
-      { name: 'Redis', level: 55 },
       { name: 'Mongoose', level: 80 },
-      { name: 'Prisma', level: 65 },
     ],
   },
   {
@@ -52,15 +49,13 @@ const categories = [
       { name: 'Docker', level: 65 },
       { name: 'AWS (EC2/S3)', level: 62 },
       { name: 'Vercel/Netlify', level: 85 },
-      { name: 'CI/CD', level: 60 },
-      { name: 'Linux', level: 70 },
-    ],
+    ]
   },
 ];
 
 const techLogos = [
-  'React', 'Node.js', 'JavaScript', 'TypeScript', 'MongoDB', 'PostgreSQL',
-  'Python', 'Docker', 'AWS', 'Git', 'GraphQL', 'Redis',
+  'React', 'Node.js', 'JavaScript', 'MongoDB',
+  'Python', 'Docker', 'AWS', 'Git',
 ];
 
 const SkillBar = ({ name, level, color, delay }) => {

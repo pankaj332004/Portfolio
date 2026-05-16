@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* Logo */}
         <a href="#" className="navbar__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <span className="navbar__logo-bracket">{'<'}</span>
-          <span className="navbar__logo-name">YN</span>
+          <span className="navbar__logo-name">Pankaj</span>
           <span className="navbar__logo-bracket">{'/>'}</span>
         </a>
 

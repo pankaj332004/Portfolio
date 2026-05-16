@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="footer__brand">
             <span className="footer__logo">
               <span className="navbar__logo-bracket">{'<'}</span>
-              <span className="footer__logo-name">YN</span>
+              <span className="footer__logo-name">Pankaj</span>
               <span className="navbar__logo-bracket">{'/>'}</span>
             </span>
             <p className="footer__tagline">
@@ -37,13 +37,13 @@ const Footer = () => {
           </div>
 
           <div className="footer__socials">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer__social">
+            <a href="https://github.com/pankaj332004" target="_blank" rel="noopener noreferrer" className="footer__social">
               <GithubIcon size={18} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer__social">
+            <a href="https://www.linkedin.com/in/pankaj-kumar-rajbhar-b77150340/" target="_blank" rel="noopener noreferrer" className="footer__social">
               <LinkedinIcon size={18} />
             </a>
-            <a href="mailto:your@email.com" className="footer__social">
+            <a href="pk902124@gmail.com" className="footer__social">
               <Mail size={18} />
             </a>
           </div>
@@ -53,7 +53,7 @@ const Footer = () => {
 
         <div className="footer__bottom">
           <p className="footer__copy">
-            © {year} Your Name. All rights reserved.
+            © {year} Pankaj Kumar Rajbhar. All rights reserved.
           </p>
           <p className="footer__credits">
             Built with <Heart size={12} className="footer__heart" /> using React & Framer Motion

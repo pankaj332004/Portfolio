@@ -6,9 +6,9 @@ import { GithubIcon, LinkedinIcon } from './BrandIcons';
 import './Hero.css';
 
 const stats = [
-  { value: '3+', label: 'Years Coding' },
-  { value: '15+', label: 'Projects Built' },
-  { value: '500+', label: 'Problems Solved' },
+  { value: '2+', label: 'Years Coding' },
+  { value: '10+', label: 'Projects Built' },
+  { value: '400+', label: 'Problems Solved' },
 ];
 
 const Hero = () => {
@@ -62,7 +62,7 @@ const Hero = () => {
               transition={{ delay: 0.3, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
               Hi, I'm <br />
-              <span className="hero__name gradient-text">Your Name</span>
+              <span className="hero__name gradient-text">Pankaj Kumar Rajbhar</span>
             </motion.h1>
 
             <motion.div
@@ -75,9 +75,10 @@ const Hero = () => {
               <TypeAnimation
                 sequence={[
                   'Full Stack Developer', 2000,
-                  'React Enthusiast', 2000,
-                  'UI/UX Craftsman', 2000,
+                  'Web Designer', 2000,
+                  'Always Learning New Tech', 2000,
                   'Problem Solver', 2000,
+                  'UI/UX Designer', 2000,
                 ]}
                 wrapper="span"
                 speed={50}
@@ -94,8 +95,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6 }}
           >
-            I craft <strong>high-performance web applications</strong> with clean code and
-            thoughtful UX. Passionate about turning ideas into elegant digital experiences.
+            I craft <strong>high-performance web applications</strong> with clean code and thoughtful UX.
+            Driven by creativity, performance, and the pursuit of exceptional user experiences.
           </motion.p>
 
           {/* Stats */}
@@ -142,11 +143,11 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hero__social-link">
+            <a href="https://github.com/pankaj332004" target="_blank" rel="noopener noreferrer" className="hero__social-link">
               <GithubIcon size={18} />
               <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hero__social-link">
+            <a href="https://www.linkedin.com/in/pankaj-kumar-rajbhar-b77150340/" target="_blank" rel="noopener noreferrer" className="hero__social-link">
               <LinkedinIcon size={18} />
               <span>LinkedIn</span>
             </a>
@@ -186,7 +187,7 @@ const Hero = () => {
                 <span className="t-line-num">2</span>
                 <span className="t-key">  name</span>
                 <span className="t-op">: </span>
-                <span className="t-string">'Your Name'</span>,
+                <span className="t-string">'Pankaj Kumar Rajbhar'</span>,
               </div>
               <div className="terminal__line">
                 <span className="t-line-num">3</span>

@@ -7,14 +7,14 @@ import './About.css';
 const timeline = [
   {
     year: '2023 – Present',
-    title: 'B.Tech in Computer Science',
-    org: 'University Name',
-    desc: 'Focused on data structures, algorithms, and full-stack development. CGPA 8.5+',
+    title: 'B.Tech in Information Technology',
+    org: 'Dr. APJ Abdul Kalam Technical University',
+    desc: 'Focused on data structures, algorithms, and full-stack development. CGPA 8.1+',
     icon: <GraduationCap size={16} />,
     color: 'emerald',
   },
   {
-    year: '2022 – 2023',
+    year: '2024 – 2025',
     title: 'Self-Taught Full Stack',
     org: 'Online Learning',
     desc: 'Built 10+ projects with React, Node.js, MongoDB and deployed to cloud platforms.',
@@ -22,10 +22,10 @@ const timeline = [
     color: 'amber',
   },
   {
-    year: '2021 – 2022',
+    year: '2023 – 2026',
     title: 'Started DSA Journey',
-    org: 'LeetCode & Codeforces',
-    desc: 'Solved 500+ problems. Achieved Knight badge on LeetCode.',
+    org: 'LeetCode & GeeksforGeeks',
+    desc: 'Solved 400+ problems.',
     icon: <Zap size={16} />,
     color: 'rose',
   },
@@ -160,10 +160,10 @@ const About = () => {
               <div className="about__quick-stats glass-card">
                 <div className="noise-overlay" />
                 {[
-                  { n: '8.5+', l: 'CGPA' },
-                  { n: '500+', l: 'Problems' },
-                  { n: '15+', l: 'Projects' },
-                  { n: '3+', l: 'Yrs Exp' },
+                  { n: '8.1+', l: 'CGPA' },
+                  { n: '400+', l: 'Problems' },
+                  { n: '10+', l: 'Projects' },
+                  { n: '2+', l: 'Yrs Exp' },
                 ].map((s, i) => (
                   <div key={i} className="quick-stat">
                     <span className="quick-stat__value gradient-text">{s.n}</span>
