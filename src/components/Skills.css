@@ -1,0 +1,187 @@
+.skills {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 1rem 0 0.75rem;
+}
+
+.skills__sub {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+
+/* Tabs */
+.skills__tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.skills__tab {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 10px;
+  cursor: none;
+  transition: all 0.2s ease;
+}
+
+.skills__tab:hover {
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.skills__tab.active {
+  color: #050810;
+  font-weight: 700;
+}
+
+.skills__tab.active--emerald { background: var(--accent-emerald); border-color: var(--accent-emerald); }
+.skills__tab.active--amber { background: var(--accent-amber); border-color: var(--accent-amber); }
+.skills__tab.active--sky { background: var(--accent-sky); border-color: var(--accent-sky); }
+.skills__tab.active--rose { background: var(--accent-rose); border-color: var(--accent-rose); }
+
+/* Panel */
+.skills__panel {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills__panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+
+.skills__panel-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.skills__panel-count {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Skill Bars */
+.skills__bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 2.5rem;
+}
+
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-bar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill-bar__name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-bar__level {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.skill-bar__level--emerald { color: var(--accent-emerald); }
+.skill-bar__level--amber { color: var(--accent-amber); }
+.skill-bar__level--sky { color: var(--accent-sky); }
+.skill-bar__level--rose { color: var(--accent-rose); }
+
+.skill-bar__track {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.skill-bar__fill--emerald { background: linear-gradient(90deg, var(--accent-emerald), var(--accent-sky)); }
+.skill-bar__fill--amber { background: linear-gradient(90deg, var(--accent-amber), var(--accent-rose)); }
+.skill-bar__fill--sky { background: linear-gradient(90deg, var(--accent-sky), var(--accent-violet)); }
+.skill-bar__fill--rose { background: linear-gradient(90deg, var(--accent-rose), var(--accent-amber)); }
+
+/* Marquee */
+.skills__marquee-wrapper {
+  margin-top: 3rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+.skills__marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skills__marquee-track {
+  display: inline-flex;
+  gap: 2rem;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.skills__marquee-item {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.skills__marquee-item:hover {
+  color: var(--accent-emerald);
+}
+
+@media (max-width: 640px) {
+  .skills__bars {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__panel {
+    padding: 1.25rem;
+  }
+}
