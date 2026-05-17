@@ -33,8 +33,8 @@ const timeline = [
 
 const interests = [
   'Open Source', 'System Design', 'Web Performance',
-  'UI Animation', 'Cloud Architecture', 'Machine Learning',
-  'DevOps', 'TypeScript'
+  'UI Animation', 'Machine Learning','Java',
+  'DevOps', 'JavaScript', 'Python', 'AWS'
 ];
 
 const FadeIn = ({ children, delay = 0, direction = 'up' }) => {

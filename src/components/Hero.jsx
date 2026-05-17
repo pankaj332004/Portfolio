@@ -214,24 +214,29 @@ const Hero = () => {
               <div className="terminal__line">
                 <span className="t-line-num">7</span>
                 <span className="t-string">    'MongoDB'</span>,
-                <span className="t-string"> 'AWS'</span>,
+                <span className="t-string"> 'DSA'</span>,
               </div>
               <div className="terminal__line">
                 <span className="t-line-num">8</span>
-                <span className="t-op">  ],</span>
+                <span className="t-string"> 'AWS'</span>,
+                <span className="t-string"> 'Java'</span>,
               </div>
               <div className="terminal__line">
                 <span className="t-line-num">9</span>
+                <span className="t-op">  ],</span>
+              </div>
+              <div className="terminal__line">
+                <span className="t-line-num">10</span>
                 <span className="t-key">  status</span>
                 <span className="t-op">: </span>
                 <span className="t-emerald">'open_to_work'</span>,
               </div>
               <div className="terminal__line">
-                <span className="t-line-num">10</span>
+                <span className="t-line-num">11</span>
                 <span className="t-op">{'}'}</span>
               </div>
               <div className="terminal__line terminal__line--active">
-                <span className="t-line-num">11</span>
+                <span className="t-line-num">12</span>
                 <span className="t-comment">// Let's build something amazing</span>
                 <span className="terminal__cursor" />
               </div>

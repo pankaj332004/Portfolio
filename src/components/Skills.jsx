@@ -11,7 +11,6 @@ const categories = [
     skills: [
       { name: 'React.js', level: 90 },
       { name: 'JavaScript', level: 88 },
-      { name: 'TypeScript', level: 70 },
       { name: 'HTML/CSS', level: 92 },
       { name: 'Redux', level: 75 },
       { name: 'Tailwind CSS', level: 82 },
@@ -24,7 +23,6 @@ const categories = [
     skills: [
       { name: 'Node.js', level: 85 },
       { name: 'Express.js', level: 83 },
-      { name: 'Python', level: 72 },
       { name: 'REST APIs', level: 88 },
       { name: 'JWT Auth', level: 80 },
     ],
@@ -35,7 +33,6 @@ const categories = [
     color: 'sky',
     skills: [
       { name: 'MongoDB', level: 82 },
-      { name: 'PostgreSQL', level: 70 },
       { name: 'MySQL', level: 72 },
       { name: 'Mongoose', level: 80 },
     ],
@@ -51,6 +48,15 @@ const categories = [
       { name: 'Vercel/Netlify', level: 85 },
     ]
   },
+  {
+    id: 'Programming language',
+    label: 'Programming language',
+    color: 'emerald',
+    skills: [
+      { name: 'Java Programming', level: 80 },
+      { name: 'DSA', level: 72 },
+    ]
+  }
 ];
 
 const techLogos = [
