@@ -17,10 +17,49 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate sending
-    await new Promise(r => setTimeout(r, 1800));
-    setStatus('success');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
+      console.warn("Web3Forms Access Key is not configured. Falling back to simulation mode.");
+      await new Promise(r => setTimeout(r, 1500));
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setStatus('idle'), 4000);
+      return;
+    }
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: 'Portfolio Contact Form'
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        console.error("Web3Forms submission failed:", result);
+        setStatus('error');
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setStatus('error');
+    }
+
     setTimeout(() => setStatus('idle'), 4000);
   };
 
@@ -187,12 +226,13 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className={`btn-primary form-submit ${status === 'success' ? 'form-submit--success' : ''}`}
+                className={`btn-primary form-submit ${status === 'success' ? 'form-submit--success' : ''} ${status === 'error' ? 'form-submit--error' : ''}`}
                 disabled={status === 'sending' || status === 'success'}
               >
                 {status === 'idle' && (<><span>Send Message</span><Send size={16} /></>)}
                 {status === 'sending' && (<><span>Sending...</span><Loader size={16} className="spin" /></>)}
                 {status === 'success' && (<><span>Message Sent!</span><CheckCircle size={16} /></>)}
+                {status === 'error' && (<><span>Error! Try Again</span><Send size={16} /></>)}
               </button>
             </form>
           </motion.div>

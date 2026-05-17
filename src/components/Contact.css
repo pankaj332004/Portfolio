@@ -203,6 +203,10 @@ a.contact__detail-value:hover {
   background: linear-gradient(135deg, #10d9a8, #28c840) !important;
 }
 
+.form-submit--error {
+  background: linear-gradient(135deg, #f43f5e, #e11d48) !important;
+}
+
 .spin {
   animation: spin-slow 1s linear infinite;
 }
